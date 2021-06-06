@@ -1,0 +1,232 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.3/css/all.css" integrity="sha384-UHRtZLI+pbxtHCWp1t77Bi1L4ZtiqrqD80Kn4Z8NTSRyMA2Fd33n5dQ8lWUE00s/" crossorigin="anonymous"></head>
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <title>site patisserie</title>
+    <link rel="stylesheet" href="../css/teststyle.css" type="text/css">
+    <script src="http://code.jquery.com/jquery-1.12.0.min.js"></script>
+    <script src="http://cdn.jsdelivr.net/jquery.validation/1.14.0/jquery.validate.min.js"></script>
+    <style>
+body{
+background: #24C6DC;  /* fallback for old browsers */
+background: -webkit-linear-gradient(to right, #514A9D, #24C6DC);  /* Chrome 10-25, Safari 5.1-6 */
+background: linear-gradient(to right, #514A9D, #24C6DC); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+}
+.connecter{
+padding:100px;
+}
+#contact{
+max-width:400px;
+padding:20px;
+background-color:#ffffff;
+margin:auto;
+}
+ul{
+list-style:none;
+padding:0;
+margin:0
+}
+input{
+border:1px solid #f7f7f7;
+border-radius:8px;
+padding:10px;
+width:100%;
+}
+textarea{
+border:1px solid #f7f7f7;
+width:100%;
+}
+.hidden{
+display:none;
+visibility:hidden;
+}
+.error {
+color: #ff0000;
+}
+.submit{
+margin-top:30px;
+width:150px;
+margin:30px 0;
+background-color:black;
+color:white;
+background: #24C6DC;  /* fallback for old browsers */
+background: -webkit-linear-gradient(to right, #514A9D, #24C6DC);  /* Chrome 10-25, Safari 5.1-6 */
+background: linear-gradient(to right, #514A9D, #24C6DC); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+}
+.mandatory{
+  font-size:1.3em;
+  margin: 50px 0;
+  font-weight: normal;
+text-align:center;
+}
+</style>
+  </head>
+  <body>
+       <!--navbar-->
+       <nav class="navbar navbar-expand-lg navbar-dark">
+        <div class="container">
+          <a class="navbar-brand" href="#">patisserie el haouari</a>
+          <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarsExample07" aria-controls="navbarsExample07" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+      
+          <div class="collapse navbar-collapse" id="navbarsExample07">
+            <ul class="navbar-nav mr-auto">
+              <li class="nav-item active">
+                <a class="nav-link" href="../html/testindex.html">Accueil <span class="sr-only">(current)</span></a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#">A propos</a>
+              </li>
+              <li class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle" href="#" id="dropdown07" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Produits</a>
+                <div class="dropdown-menu" aria-labelledby="dropdown07">
+                  <a class="dropdown-item" href="../html/gateaux.html">Gâteaux</a>
+                  <a class="dropdown-item" href="#">Salé</a>
+                </div>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="../html/contact.html">Contact</a>
+              </li>
+            </ul>
+            <form class="form-inline my-2 my-md-0">
+                <a href="../html/inscription.html" class="insciption text-light">s'inscrire </a>
+                <a href="../html/connecter.html" class="btn btn-light" style="border-radius: 20px;margin-left: 10px;">connecter</a>   
+      </form>
+          </div>
+        </div>
+      </nav>
+       <!--end of navbar-->
+<!--login form-->
+
+
+<div class="connecter">
+
+  <form id="contact" name="contact">
+   
+    <ul>  
+      <li>
+        <h2 style="text-align: center;font-family: Georgia, 'Times New Roman', Times, serif;">Connecter</h2>
+      </li>                 
+      <li>
+        <label></label>
+        <input placeholder="Email" type="text" name="email" required/>
+      </li>
+      <li>
+        <label></label>
+        <input placeholder="mot de passe" type="text" name="mdp" required/>
+      </li>
+    </ul>
+    <input class="submit" type="submit" value="Submit">
+    
+  </form>
+<div id="msgSubmit" class="hidden">
+  <p class="blue">Merci ! Votre message est bien envoyé.<br/>
+    Nous revenons vers vous dans les plus brefs délais.</p>
+</div>
+</div>
+<!--end of login-->
+<script>
+
+// Wait for the DOM to be ready
+$(function() {
+  // Initialize form validation on the registration form.
+  // It has the name attribute "registration"
+  $("form[name='contact']").validate({
+    // Specify validation rules
+    rules: {
+      // The key name on the left side is the name attribute
+      // of an input field. Validation rules are defined
+      // on the right side
+      nom: {
+        required: true,
+        minlength:4
+      },
+      mdp: {
+        required: true,
+        minlength:8
+      },
+      cmdp: {
+        required: true,
+        minlength:8,    
+        equalTo: "#mainForm input[name='mdp']"
+      },
+      email: {
+        required: true,
+        email: true
+      },
+      message:"required"
+    },
+    // Specify validation error messages
+    messages: {
+      nom: "veuillez insérer un nom contient au minimum 4 caractere",
+      mdp:"veuillez indiquer un mot de passe",
+      cmdp:"veuillez inserer le meme mot de passe ",
+      email: "veuillez insérer une adresse mail valide"
+    },
+    // Make sure the form is submitted to the destination defined
+    // in the "action" attribute of the form when valid
+    submitHandler: function(form) {
+      form.submit();
+    }
+  });
+});
+
+</script>
+     <!--footer-->
+<footer class="bg" style="background-color: aliceblue;">
+    <div class="container py-5">
+      <div class="row py-4">
+        <div class="col-lg-4 col-md-6 mb-4 mb-lg-0">
+          <h6 class="text-uppercase font-weight-bold mb-4">A propos</h6>
+          <p class="font-italic text-muted">patisserie el haouari vous accueille et vous propose un choix gourmand de prestations salés ou sucrés riches, variés et à des prix compétitifs .</p>
+          <ul class="list-inline mt-4">
+            <a href="#"><i class="fab fa-facebook"></i></a> 
+            <a href="#"><i class="fab fa-instagram"></i></a> 
+            <a href="#"><i class="fab fa-skype"></i></a>
+            </ul>
+        </div>
+        <div class="col-lg-2 col-md-6 mb-4 mb-lg-0">
+          <h6 class="text-uppercase font-weight-bold mb-4">Menu</h6>
+          <ul class="list-unstyled mb-0">
+            <li class="mb-2"><a href="#" class="text-muted">Accueil</a></li>
+            <li class="mb-2"><a href="#" class="text-muted">Salé</a></li>
+            <li class="mb-2"><a href="#" class="text-muted">Idée cadeau</a></li>
+            <li class="mb-2"><a href="#" class="text-muted">Contact</a></li>
+          </ul>
+        </div>
+        <div class="col-lg-2 col-md-6 mb-4 mb-lg-0">
+          <h6 class="text-uppercase font-weight-bold mb-4">Mon Compte</h6>
+          <ul class="list-unstyled mb-0">
+            <li class="mb-2"><a href="#" class="text-muted">Inscription</a></li>
+            <li class="mb-2"><a href="#" class="text-muted">Creer un compte</a></li>
+          </ul>
+        </div>
+        <div class="col-lg-4 col-md-6 mb-lg-0">
+          <h6 class="text-uppercase font-weight-bold mb-4">Newsletter</h6>
+          <p class="text-muted mb-4">Recevez toutes les dernières informations sur les offres. Inscrivez-vous à la newsletter dès aujourd'hui.</p>
+          <div class="p-1 rounded border">
+            <div class="input-group">
+              <input type="email" placeholder="Enter your email address" aria-describedby="button-addon1" class="form-control border-0 shadow-0">
+              <div class="input-group-append">
+                <button id="button-addon1" type="submit" class="btn btn-link"><i class="fa fa-paper-plane"></i></button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  
+    <!-- Copyrights -->
+    <div class="bg-light py-4">
+      <div class="container text-center">
+        <p class="text-muted mb-0 py-2">© 2021 BY SIWAR HAOUARI.</p>
+      </div>
+    </div>
+  </footer>
+  <!-- End of footer-->

@@ -1,0 +1,204 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.3/css/all.css" integrity="sha384-UHRtZLI+pbxtHCWp1t77Bi1L4ZtiqrqD80Kn4Z8NTSRyMA2Fd33n5dQ8lWUE00s/" crossorigin="anonymous"></head>
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <title>test</title>
+    <link rel="stylesheet" href="../css/teststyle.css" type="text/css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script>
+      $(document).ready(function(){
+        $("#p1").hide();
+        $("#p2").hide();
+        $("#p3").hide();
+        $("#p4").hide();
+        $("#p5").hide();
+        $("#p6").hide();
+
+        $("#btn1").click(function(){
+          $("#p1").toggle();
+        });
+        $("#btn2").click(function(){
+          $("#p2").toggle();
+        });
+        $("#btn3").click(function(){
+          $("#p3").toggle();
+        });
+        $("#btn4").click(function(){
+          $("#p4").toggle();
+        });
+        $("#btn5").click(function(){
+          $("#p5").toggle();
+        });
+        $("#btn6").click(function(){
+          $("#p6").toggle();
+        });
+      });
+      </script>
+  </head>
+  <body>
+       <!--navbar-->
+       <nav class="navbar navbar-expand-lg navbar-dark">
+        <div class="container">
+          <a class="navbar-brand" href="#">patisserie el haouari</a>
+          <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarsExample07" aria-controls="navbarsExample07" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+      
+          <div class="collapse navbar-collapse" id="navbarsExample07">
+            <ul class="navbar-nav mr-auto">
+              <li class="nav-item active">
+                <a class="nav-link" href="../html/testindex.html">Accueil <span class="sr-only">(current)</span></a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#">A propos</a>
+              </li>
+              <li class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle" href="#" id="dropdown07" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Produits</a>
+                <div class="dropdown-menu" aria-labelledby="dropdown07">
+                  <a class="dropdown-item" href="../html/gateaux.html">Gâteaux</a>
+                  <a class="dropdown-item" href="#">Salé</a>
+                </div>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="../html/contact.html">Contact</a>
+              </li>
+            </ul>
+            <form class="form-inline my-2 my-md-0">
+                <a href="../html/inscription.html" class="insciption text-light">s'inscrire </a>
+                <a href="../html/connecter.html" class="btn btn-light" style="border-radius: 20px;margin-left: 10px;">connecter</a>   
+      </form>
+          </div>
+        </div>
+      </nav>
+       <!--end of navbar-->
+      <!--titre-->
+        <div class="text-center" style="font-family: 'Lobster';padding-top: 5rem;background-color: salmon;  padding: 20px;">
+        <h1>Gateaux</h1>
+        </div>
+    <!--end of titre-->
+    <!--gateau-->
+    <div class="container">
+    <div class="card-deck" style="margin-top: 50px;">
+        <div class="card" style="width:400px">
+            <img class="card-img-top" src="../images/gateau1.jpg" alt="Card image" style="width:100%">
+            <div class="card-body">
+              <h4 class="card-title">Gateau fraise</h4>
+              <p class="card-text">à partir de 10d</p>
+              <p id="p2">Un gâteau aux fraises est un gâteau dont la fraise constitue l’ingrédient principal. Les fraises peuvent se trouver dans la pâte, sur le gâteau ou dans le glaçage. Ce type de gâteau peut être servi frais ou partiellement glacé, et se prépare parfois spécialement pour la Saint-Valentin.</p>
+              <a href="#" class="btn btn-primary stretched-link" id="btn2">Détails</a>
+            </div>
+          </div>
+        <div class="card" style="width:400px">
+            <img class="card-img-top" src="../images/gateau2.jpg" alt="Card image" style="width:100%">
+            <div class="card-body">
+              <h4 class="card-title">Gateau chocolat</h4>
+              <p class="card-text">à partir de 20d</p>
+              <p id="p1">Un gâteau au chocolat est une pâtisserie à base de chocolat. Il existe de nombreuses recettes à travers le monde. Cette forme de gâteau aurait été imaginée à la fin du XVIIIᵉ siècle, après plusieurs siècles d'utilisation du chocolat uniquement en boisson</p>
+              <a href="#" class="btn btn-primary stretched-link" id="btn1">Détails</a>
+            </div>
+          </div>
+        <div class="card" style="width:400px">
+            <img class="card-img-top" src="../images/gateau3.jpg" alt="Card image" style="width:100%">
+            <div class="card-body">
+              <h4 class="card-title">Gateau aux cerises</h4>
+              <p class="card-text">à partir de 30d</p>
+              <p id="p3">ce gateau est delicieux</p>
+              <a href="#" class="btn btn-primary stretched-link" id="btn3">Détails</a>
+            </div>
+          </div>
+    </div>
+    <div class="card-deck" style="margin-top: 50px;" >
+        <div class="card" style="width:400px">
+            <img class="card-img-top" src="../images/gateau1.jpg" alt="Card image" style="width:100%">
+            <div class="card-body">
+              <h4 class="card-title">Gateau fraise</h4>
+              <p class="card-text">à partir de 10d</p>
+              <p id="p4">ce gateau est delicieux</p>
+              <a href="#" class="btn btn-primary stretched-link" id="btn4">Détails</a>
+            </div>
+          </div>
+        <div class="card" style="width:400px">
+            <img class="card-img-top" src="../images/gateau2.jpg" alt="Card image" style="width:100%">
+            <div class="card-body">
+              <h4 class="card-title">Gateau chocolat</h4>
+              <p class="card-text">à partir de 20d</p>
+              <p id="p5">ce gateau est delicieux</p>
+              <a href="#" class="btn btn-primary stretched-link" id="btn5">Détails</a>
+            </div>
+          </div>
+        <div class="card" style="width:400px">
+            <img class="card-img-top" src="../images/gateau3.jpg" alt="Card image" style="width:100%">
+            <div class="card-body">
+              <h4 class="card-title">Gateau aux cerises</h4>
+              <p class="card-text">à partir de 30d</p>
+              <p id="p6">ce gateau est delicieux</p>
+              <a href="#" class="btn btn-primary stretched-link"id="btn6">Détails</a>
+            </div>
+          </div>
+    </div>
+    </div>
+     <!--footer-->
+<footer class="bg" style="background-color: aliceblue;margin-top: 5rem">
+    <div class="container py-5">
+      <div class="row py-4">
+        <div class="col-lg-4 col-md-6 mb-4 mb-lg-0">
+          <h6 class="text-uppercase font-weight-bold mb-4">A propos</h6>
+          <p class="font-italic text-muted">patisserie el haouari vous accueille et vous propose un choix gourmand de prestations salés ou sucrés riches, variés et à des prix compétitifs .</p>
+          <ul class="list-inline mt-4">
+            <a href="#"><i class="fab fa-facebook"></i></a> 
+            <a href="#"><i class="fab fa-instagram"></i></a> 
+            <a href="#"><i class="fab fa-skype"></i></a>
+            </ul>
+        </div>
+        <div class="col-lg-2 col-md-6 mb-4 mb-lg-0">
+          <h6 class="text-uppercase font-weight-bold mb-4">Menu</h6>
+          <ul class="list-unstyled mb-0">
+            <li class="mb-2"><a href="#" class="text-muted">Accueil</a></li>
+            <li class="mb-2"><a href="#" class="text-muted">Salé</a></li>
+            <li class="mb-2"><a href="#" class="text-muted">Idée cadeau</a></li>
+            <li class="mb-2"><a href="#" class="text-muted">Contact</a></li>
+          </ul>
+        </div>
+        <div class="col-lg-2 col-md-6 mb-4 mb-lg-0">
+          <h6 class="text-uppercase font-weight-bold mb-4">Mon Compte</h6>
+          <ul class="list-unstyled mb-0">
+            <li class="mb-2"><a href="#" class="text-muted">Inscription</a></li>
+            <li class="mb-2"><a href="#" class="text-muted">Creer un compte</a></li>
+          </ul>
+        </div>
+        <div class="col-lg-4 col-md-6 mb-lg-0">
+          <h6 class="text-uppercase font-weight-bold mb-4">Newsletter</h6>
+          <p class="text-muted mb-4">Recevez toutes les dernières informations sur les offres. Inscrivez-vous à la newsletter dès aujourd'hui.</p>
+          <div class="p-1 rounded border">
+            <div class="input-group">
+              <input type="email" placeholder="Enter your email address" aria-describedby="button-addon1" class="form-control border-0 shadow-0">
+              <div class="input-group-append">
+                <button id="button-addon1" type="submit" class="btn btn-link"><i class="fa fa-paper-plane"></i></button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  
+    <!-- Copyrights -->
+    <div class="bg-light py-4">
+      <div class="container text-center">
+        <p class="text-muted mb-0 py-2">© 2021 BY SIWAR HAOUARI.</p>
+      </div>
+    </div>
+  </footer>
+  <!-- End of footer-->
+      <!-- Optional JavaScript -->
+      <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+      <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+      <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+    </body>
+  </html>
